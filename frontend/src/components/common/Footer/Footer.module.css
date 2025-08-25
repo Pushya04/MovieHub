@@ -1,0 +1,176 @@
+/* Footer.module.css */
+.footer {
+    background: #0f0f0f;
+    color: #ffffff;
+    padding: 4rem 0 2rem;
+    margin-top: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Brand Section */
+.brandSection {
+    max-width: 300px;
+}
+
+.logo img {
+    height: 45px;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Footer Links */
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.column {
+    margin-bottom: 1.5rem;
+}
+
+.heading {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e50914;
+    display: inline-block;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    color: #a0a0a0;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #e50914;
+}
+
+/* Social Media */
+.social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+.socialLink img {
+    width: 24px;
+    height: 24px;
+}
+
+.socialLink:hover {
+    transform: translateY(-2px);
+}
+
+/* Copyright */
+.copyright {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socialLinks a {
+  color: #d1d5db;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid #374151;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .brandSection {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footerSection {
+      text-align: center;
+    }
+    
+    .socialLinks {
+      justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .links {
+        grid-template-columns: 1fr;
+    }
+
+    .column {
+        text-align: center;
+    }
+
+    .heading {
+        display: block;
+        text-align: center;
+    }
+}

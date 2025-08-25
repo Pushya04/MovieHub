@@ -1,0 +1,275 @@
+.heroSection {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    position: relative;
+    background-color: #0a0a0a;
+    overflow: hidden;
+  }
+  
+  /* Slide Container and Animation */
+  .slideContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    background-color: #0a0a0a;
+  }
+  
+  .slideOutLeft {
+    animation: slideOutLeft 0.5s forwards;
+  }
+  
+  .slideOutRight {
+    animation: slideOutRight 0.5s forwards;
+  }
+  
+  @keyframes slideOutLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+  
+  @keyframes slideOutRight {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+  }
+  
+  /* Slide Background */
+  .slideBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Content Styling */
+  .slideContent {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .movieInfo {
+    color: white;
+    max-width: 600px;
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .movieTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .movieSynopsis {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .movieMeta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .rating, .year, .runtime {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1rem;
+  }
+  
+  .viewButton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .viewButton:hover {
+    background-color: #0078e7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Navigation Controls */
+  .navigation {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+  }
+  
+  .navButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .navButton:hover {
+    background-color: rgba(30, 144, 255, 0.8);
+    transform: scale(1.1);
+  }
+  
+  .indicators {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .activeIndicator {
+    background-color: #1e90ff;
+    transform: scale(1.2);
+  }
+  
+  /* Loading State */
+  .heroLoading {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a0a0a;
+    color: white;
+  }
+  
+  .loadingSpinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-top: 5px solid #1e90ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error State */
+  .heroError {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: #0a0a0a;
+    color: #ff4444;
+  }
+  
+  .retryButton {
+    padding: 0.8rem 1.5rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .retryButton:hover {
+    background-color: #0078e7;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .heroSection {
+      height: 60vh;
+    }
+    
+    .movieTitle {
+      font-size: 2rem;
+    }
+    
+    .movieSynopsis {
+      font-size: 1rem;
+    }
+    
+    .movieMeta {
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .viewButton {
+      padding: 0.7rem 1.5rem;
+    }
+    
+    .navButton {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .heroSection {
+      height: 50vh;
+    }
+    
+    .movieTitle {
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    .movieSynopsis {
+      margin-bottom: 1rem;
+      -webkit-line-clamp: 2;
+    }
+  }

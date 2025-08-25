@@ -1,0 +1,98 @@
+/* Rating.module.css */
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    backdrop-filter: blur(4px);
+    color: white;
+  }
+  
+  /* Rating Display */
+  .ratingDisplay {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .starIcon {
+    width: 32px;
+    height: 32px;
+    color: #ffd700;
+    flex-shrink: 0;
+  }
+  
+  .ratingValue {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    line-height: 1;
+  }
+  
+  .ratingScale {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 0.3rem;
+    font-weight: 500;
+  }
+  
+  /* Synopsis Styles */
+  .synopsisContainer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+  }
+  
+  .synopsisHeading {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+    font-weight: 600;
+  }
+  
+  .synopsisText {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .starIcon {
+      width: 28px;
+      height: 28px;
+    }
+  
+    .ratingValue {
+      font-size: 1.75rem;
+    }
+  
+    .synopsisText {
+      -webkit-line-clamp: 4;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ratingValue {
+      font-size: 1.5rem;
+    }
+  
+    .synopsisHeading {
+      font-size: 1.1rem;
+    }
+  
+    .synopsisText {
+      font-size: 0.9rem;
+      -webkit-line-clamp: 3;
+    }
+  }

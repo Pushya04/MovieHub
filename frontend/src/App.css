@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #0f0f0f;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0; /* Light gray text for better contrast */
+}
+
+.app {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+    position: relative;
+    overflow: hidden;
+    color: #ffffff; /* Pure white for main content */
+}
+
+.app::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: 
+        linear-gradient(
+            rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 255, 0, 0.02),
+            rgba(0, 0, 255, 0.06)
+        ),
+        radial-gradient(#ffffff 1px, transparent 1px),
+        radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 100% 2px, 3px 100%, 50px 50px, 50px 50px;
+    background-position: 0 0, 0 0, 0 0, 25px 25px;
+    animation: backgroundNoise 0.3s infinite, pulse 4s infinite;
+    opacity: 0.08;
+}
+
+.app::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(
+        135deg,
+        transparent,
+        rgba(255,255,255,0.05),
+        transparent
+    );
+    background-size: 400% 400%;
+    animation: moveGradient 15s ease infinite;
+    opacity: 0.3;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    color: #ffffff; /* Ensure main content is white */
+}
+
+/* Add these new styles for better text visibility */
+pre {
+    background-color: rgba(30, 30, 30, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    color: #f0f0f0; /* Light gray for code/pre elements */
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+button {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #4a4a4a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+@keyframes backgroundNoise {
+    0%, 100% { opacity: 0.08; }
+    50% { opacity: 0.12; }
+}
+
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.05; }
+    50% { opacity: 0.08; }
+}

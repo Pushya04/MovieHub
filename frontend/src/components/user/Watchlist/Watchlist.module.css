@@ -1,0 +1,115 @@
+.watchlist-container {
+    padding: 2rem 1.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .watchlist-title {
+    color: var(--text-primary, #fff);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  .watchlist-item {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .watchlist-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .remove-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-weight: 500;
+  }
+  
+  .remove-button:hover {
+    background: rgba(200, 0, 0, 0.9);
+    transform: scale(1.05);
+  }
+  
+  .watchlist-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+  }
+  
+  .watchlist-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top: 5px solid var(--primary-color, #3498db);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .watchlist-error {
+    color: var(--error-color, #ff4444);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    background: var(--background-secondary, #1a1a1a);
+    margin: 2rem 0;
+    border-radius: 8px;
+  }
+  
+  .watchlist-empty {
+    color: var(--text-secondary, #888);
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.3rem;
+  }
+  
+  @media (max-width: 1280px) {
+    .watchlist-grid {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.75rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .watchlist-container {
+      padding: 1.5rem 1rem;
+    }
+  
+    .watchlist-title {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+  
+    .watchlist-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

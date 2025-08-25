@@ -1,0 +1,114 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+  
+  .mainContent {
+    flex: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+    color: #fff;
+  }
+  
+  .genreSection {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .recommendationsSection {
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+  
+  .moviesSection {
+    padding-bottom: 3rem;
+  }
+
+  .genreSectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .clearGenreButton {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+  }
+
+  .clearGenreButton:hover {
+    background: #b91c1b;
+  }
+  
+  .featuredSection {
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+
+  .featuredSection .sectionTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .mainContent {
+      gap: 2.5rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainContent {
+      gap: 2rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+    }
+    
+    .filterSection {
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mainContent {
+      gap: 1.5rem;
+    }
+    
+    .sectionTitle {
+      font-size: 1.3rem;
+    }
+  }

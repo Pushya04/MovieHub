@@ -1,0 +1,204 @@
+.profile-container {
+    padding: 2rem 1.5rem;
+    background-color: #0a0a0a;
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .user-info {
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+  
+  .user-info p {
+    margin: 0.3rem 0;
+  }
+  
+  .account-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .logout-button,
+  .reset-password-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .logout-button {
+    background-color: #ff4444;
+    color: white;
+  }
+  
+  .logout-button:hover {
+    background-color: #cc0000;
+  }
+  
+  .reset-password-button {
+    background-color: #1e90ff;
+    color: white;
+  }
+  
+  .reset-password-button:hover {
+    background-color: #0066cc;
+  }
+  
+  .profile-content {
+    display: grid;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .profile-section {
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .profile-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .comments-list {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .comment-card {
+    background: #2a2a2a;
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .movie-title {
+    color: #1e90ff;
+    font-weight: 500;
+  }
+  
+  .comment-date {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .comment-content {
+    color: #ddd;
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .comment-likes {
+    color: #ff4444;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .comment-author {
+    color: #888;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .empty-message {
+    color: #888;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .error-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .error-message {
+    color: #ff4444;
+    background: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      padding: 1.5rem 1rem;
+    }
+  
+    .profile-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .account-actions {
+      flex-direction: column;
+    }
+  
+    .watchlist-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+  
+    .comment-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-section {
+      padding: 1rem;
+    }
+  }

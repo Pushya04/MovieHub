@@ -1,0 +1,45 @@
+:root {
+    --bg-dark: #0a0a0a;
+    --content-max-width: 1440px;
+    --desktop-padding: 2rem 1.5rem;
+    --tablet-padding: 1.5rem 1rem;
+    --mobile-padding: 1rem 0.5rem;
+  }
+  
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--bg-dark);
+  }
+  
+  .main-content {
+    flex: 1;
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--desktop-padding);
+    transition: padding 0.3s ease;
+  }
+  
+  .main-content.full-width {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  /* Ensure full-width content children stretch properly */
+  .main-content.full-width > * {
+    width: 100%;
+  }
+  
+  @media (max-width: 1024px) {
+    .main-content:not(.full-width) {
+      padding: var(--tablet-padding);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content:not(.full-width) {
+      padding: var(--mobile-padding);
+    }
+  }

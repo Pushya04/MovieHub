@@ -1,0 +1,81 @@
+:root {
+    --bg-dark: #1a1a1a;
+    --card-bg: #2a2a2a;
+    --primary-color: #1e90ff;
+    --text-light: #ffffff;
+    --text-muted: #888;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --gap: 1.5rem;
+  }
+  
+  .analytics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--gap);
+    margin: 2rem 0;
+    background: var(--bg-dark);
+    border-radius: 12px;
+    padding: var(--gap);
+    box-shadow: var(--shadow);
+  }
+  
+  .metric-card {
+    background: var(--card-bg);
+    padding: var(--gap);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .metric-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .metric-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-color);
+  }
+  
+  .metric-title {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .metric-value {
+    color: var(--text-light);
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  @media (max-width: 768px) {
+    .analytics-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .metric-card {
+      padding: 1rem;
+    }
+  
+    .metric-value {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .analytics-container {
+      grid-template-columns: 1fr;
+    }
+  }

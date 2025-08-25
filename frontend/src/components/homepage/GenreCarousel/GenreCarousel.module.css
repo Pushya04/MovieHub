@@ -1,0 +1,231 @@
+/* Root variables */
+:root {
+    --primary: #1e90ff;
+    --primary-dark: #0066cc;
+    --primary-light: #5caeff;
+    --text-light: #ffffff;
+    --bg-dark: #0a0a0a;
+    --error: #ff4444;
+    --section-spacing: 2rem;
+    --transition-standard: all 0.3s ease;
+  }
+  
+  /* Section container */
+  .genreCarouselSection {
+    margin: var(--section-spacing) 0;
+    padding: 0 40px; /* Increased padding for arrow space */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Section title */
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-weight: 600;
+    padding-left: 8px;
+  }
+  
+  /* Carousel container */
+  .carouselContainer {
+    position: relative;
+    margin: 0 -8px; /* Negative margin to counteract slide padding */
+  }
+  
+  /* Genre card wrapper */
+  .genreCardWrapper {
+    padding: 0 8px;
+    box-sizing: border-box;
+    height: 120px; /* Fixed height for consistency */
+  }
+  
+  /* Make sure slick track is properly aligned */
+  .carouselContainer :global(.slick-track) {
+    display: flex !important;
+    margin-left: 0; /* Reset default margin */
+  }
+  
+  /* Override slick default styles to ensure proper rendering */
+  .carouselContainer :global(.slick-slider) {
+    position: relative;
+    touch-action: pan-y; /* Better touch handling */
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .carouselContainer :global(.slick-list) {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carouselContainer :global(.slick-slide) {
+    float: left; /* Essential for left-to-right scrolling */
+    height: 100%;
+    min-height: 1px;
+    display: block !important;
+  }
+  
+  .carouselContainer :global(.slick-slide > div) {
+    height: 100%;
+  }
+  
+  /* Navigation arrows styling */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition-standard);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .arrow:hover, .arrow:focus {
+    background-color: var(--primary);
+    outline: none;
+  }
+  
+  .arrow:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+  
+  .nextArrow {
+    right: 5px;
+  }
+  
+  .prevArrow {
+    left: 5px;
+  }
+  
+  .arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Optional external navigation buttons */
+  .externalNavigationBtn {
+    margin: 0 10px 20px 0;
+    padding: 8px 16px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition-standard);
+  }
+  
+  .externalNavigationBtn:hover, .externalNavigationBtn:focus {
+    background-color: var(--primary-dark);
+    outline: none;
+  }
+  
+  /* Loading state */
+  .loadingContainer {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .loadingSpinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error state */
+  .errorContainer {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--error);
+  }
+  
+  .errorMessage {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .retryButton {
+    padding: 0.6rem 1.2rem;
+    background: var(--primary);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition-standard);
+  }
+  
+  .retryButton:hover {
+    background: var(--primary-dark);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .genreCarouselSection {
+      padding: 0 30px;
+      margin: 1.5rem 0;
+    }
+    
+    .sectionTitle {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .genreCardWrapper {
+      height: 100px;
+    }
+    
+    .arrow {
+      width: 36px;
+      height: 36px;
+    }
+    
+    .arrow svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .genreCarouselSection {
+      padding: 0 25px;
+    }
+    
+    .sectionTitle {
+      font-size: 1.3rem;
+    }
+    
+    .genreCardWrapper {
+      height: 90px;
+    }
+    
+    .arrow {
+      width: 32px;
+      height: 32px;
+    }
+  }
