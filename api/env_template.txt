@@ -1,0 +1,19 @@
+# Copy this content to your .env file in the api folder
+
+# Database Configuration
+DATABASE_URL=mysql+pymysql://root:Bantu%4012@localhost:3306/movie_data
+
+# JWT Configuration
+SECRET_KEY=Nhreddy@3456&00917
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# SMTP Configuration
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=reddyhemanth261@gmail.com
+SMTP_PASSWORD=nhreddy12
+
+# CORS Configuration
+CORS_ORIGINS=["http://localhost:5173", "http://localhost:3000"]
+
