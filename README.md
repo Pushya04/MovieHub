@@ -446,4 +446,4 @@ Your MovieHub project is a complete, production-ready application that showcases
 
 ---
 
-**Made with ❤️ by Pyaraka Pushyamithra**
+**Made with ❤️ & ☕**
